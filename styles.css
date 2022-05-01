@@ -1,0 +1,22 @@
+html {
+  background-color: #fef6eb;
+}
+.h1 {
+  font-family: bold 27px Helvetica, serif;
+}
+body {
+  margin: 72px;
+  width: 72%;
+  border: 2px solid;
+  font: 15px Helvetica, serif;
+  padding: 30px
+}
+a {
+  font: italic, 15px Helvetica, serif;
+}
+input {
+  font: 13px Helvetica, serif;
+}
+p {
+  font: 13px Helvetica, serif;
+}
