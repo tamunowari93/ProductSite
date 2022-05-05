@@ -1,12 +1,11 @@
 <?php
 // Get contact information
-$fname = $_POST['fname'];
-$lname = $_POST['lname'];
-$addr  = $_POST['address'];
-$state = $_POST['state'];
-$zip = $_POST['zip'];
-$phone = $_POST['phone'];
-$email  = $_POST['email'];
+$sku = $_POST['fname'];
+$name = $_POST['lname'];
+$price  = $_POST['address'];
+$type = $_POST['state'];
+$description = $_POST['zip'];
+
 
 // Set contact information to save and display
 $firstname = "Firstname: ".$fname."\n";

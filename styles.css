@@ -1,22 +1,48 @@
 html {
-  background-color: #fef6eb;
+    background-color: #f6f0e7e4;
+    width: 99%;
+    border: 0px;
+    font: 15px Helvetica, serif;
 }
-.h1 {
-  font-family: bold 27px Helvetica, serif;
+
+div.header {
+    position: relative;
+    top: 7;
+    right: 2;
+    left: 23;
+    width: 99%;
+    display: inline-block;
 }
-body {
-  margin: 72px;
-  width: 72%;
-  border: 2px solid;
-  font: 15px Helvetica, serif;
-  padding: 30px
+
+div.header button {
+    right: -1050;
+    padding: 6px;
+    width: 100px;
+    margin-right: 1px;
+    display: inline-block;
+    position: relative;
+    align-content: right;
 }
-a {
-  font: italic, 15px Helvetica, serif;
+
+.body {
+    font-family: 18px Helvetica, serif;
+    position: relative;
+    left: 81;
+    right: 2;
+    top: 10;
+    width: 81%;
+    display: flex;
+    justify-content: left;
 }
-input {
-  font: 13px Helvetica, serif;
+
+table,
+td {
+    padding: 6px;
 }
-p {
-  font: 13px Helvetica, serif;
+
+.footer {
+    position: fixed;
+    bottom: 12;
+    width: 99%;
+    text-align: center;
 }
