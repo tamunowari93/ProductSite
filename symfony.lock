@@ -1,0 +1,41 @@
+{
+    "alrik11es/cowsayphp": {
+        "version": "1.2.0"
+    },
+    "heroku/heroku-buildpack-php": {
+        "version": "v216"
+    },
+    "monolog/monolog": {
+        "version": "1.27.0"
+    },
+    "psr/log": {
+        "version": "1.1.4"
+    },
+    "symfony/flex": {
+        "version": "2.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "c0eeb50665f0f77226616b6038a9b06c03752d8e"
+        },
+        "files": [
+            "./.env"
+        ]
+    },
+    "symfony/polyfill-ctype": {
+        "version": "v1.25.0"
+    },
+    "symfony/polyfill-mbstring": {
+        "version": "v1.25.0"
+    },
+    "symfony/polyfill-php72": {
+        "version": "v1.25.0"
+    },
+    "symfony/twig-bridge": {
+        "version": "v3.4.47"
+    },
+    "twig/twig": {
+        "version": "v2.14.13"
+    }
+}

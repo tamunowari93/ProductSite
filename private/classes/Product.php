@@ -72,7 +72,7 @@ class Product {
       return ($this->dimensions) . 'kg';
     }
     public function set_dimensions($v1,$v2,$v3) {
-      $value = ($v1." ".$v2." ".$v3);
+      $value = ($v1."x".$v2."x".$v3);
       $this->dimensions = ($value);
     }
 }

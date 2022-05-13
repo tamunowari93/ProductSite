@@ -1,11 +1,10 @@
 <?php
 
-//echo "Hello world";
+echo "Hello world";
+$form = htmlspecialchars($_POST['product_form']);
 
-function set_dimensions($v1,$v2,$v3) {
-    $value = ($v1." ".$v2." ".$v3);
-    return ($value);
-}
-echo set_dimensions(3,2,1);
+if($form) {
+    echo "Save Button is selected";
+  };
 
 ?>

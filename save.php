@@ -1,18 +1,16 @@
 <?php
-  require 'private/classes/Product.php';
+  // require('../vendor/autoload.php');
+  require ('private/classes/Product.php');
   require 'private/initialize.php';
-
-  global $db;
-
-  if(isset($_POST['product_form'])) {
-    echo "Save Button is selected";
-  }
-  if(isset($_POST['cancel'])) {
-      echo "Cancel is selected";
-  }
+  
+  $sku = htmlspecialchars($_POST['sku']);
+  
+  if(!$sku==null) {
+    echo $sku;
+  };
 
   // Get product information
-  public function getProduct(){
+  function getProduct(){
     $sku = htmlspecialchars($_POST['sku']);
     $name = htmlspecialchars($_POST['name']);
     $price  = htmlspecialchars($_POST['price']);
@@ -26,7 +24,7 @@
   }
 
   // Product CLASS INSTANCES
-  public function saveProducts() {
+  function saveProducts() {
     $product = new Product();
     $product->set_sku($sku);
     $product->set_name($name);
@@ -35,6 +33,7 @@
     $product->set_description($description);
 
     // Save product information to Database
+    global $db;
     $sql = "INSERT INTO products ";
     $sql .= "(sku, name, price, typeName, description) ";
     $sql .= "VALUES (";
@@ -57,12 +56,13 @@
     }
   } 
 
-  public function setDVD() {
+  function setDVD() {
     $dvd = new DVD();
     $dvd->set_sku($sku);
     $dvd->set_size($size);
 
     // Save dvd information to Database
+    global $db;
     $sql = "INSERT INTO dvd ";
     $sql .= "(sku, size) ";
     $sql .= "VALUES (";
@@ -81,12 +81,13 @@
       exit;
     }
   } 
-  public function setFurniture() {
+  function setFurniture() {
     $furniture = new Furniture();
     $furniture->set_sku($sku);
     $furniture->set_dimensions($height,$width,$length);
 
     // Save Furniture information to Database
+    global $db;
     $sql = "INSERT INTO furniture ";
     $sql .= "(sku, dimensions) ";
     $sql .= "VALUES (";
@@ -105,12 +106,13 @@
       exit;
     }
   } 
-  public function saveBook() {
+  function saveBook() {
     $book = new Book();
     $book->set_sku($sku);
     $book->set_weight_kg($weight_kg);
 
     // Save Book information to Database
+    global $db;
     $sql = "INSERT INTO book ";
     $sql .= "(sku, weight) ";
     $sql .= "VALUES (";
